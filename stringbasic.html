@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Basic</title>
+</head>
+<body>
+    <h1>String Basic</h1>
+    <span id="fullName">Jack Moon</span>
+    <a href="#" id="changeNameLink">Change Name</a>
+
+    <script>
+        const link = document.getElementById('changeNameLink');
+        link.addEventListener('click', function(){
+            const name = document.getElementById("fullName");
+            name.innerText = "John Doe";
+        })
+
+        const firstName = "John"; // this is a constant variable
+        const lastName = "Doe";
+        let email = "michael@doe.com"; 
+
+        console.log("Hello my name is " + firstName + " " + lastName); // string concatenation
+        console.log(`Hello my name is ${firstName} ${lastName}`); // string literal
+
+        console.log(firstName.length);
+        console.log(firstName[0]) // accessing the character using index
+        console.log(firstName.indexOf("oh"));
+
+        const nameIndex = email.indexOf("@");
+        console.log(email.slice(0,nameIndex));
+        console.log(firstName.toUpperCase());
+        console.log(lastName.replace("Doe", "Joe"));
+    </script>
+</body>
+</html>
